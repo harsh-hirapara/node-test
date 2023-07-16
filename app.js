@@ -14,7 +14,6 @@ app.get("/event/:_id", async (req, res, next) => {
 
     while (event.startDate < event.endDate) {
       const date = moment(startDate).add(1, "days");
-      console.log(date);
     }
 
     return res.status(200).json({ status: true, data: event });
